@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <title>Base64 Simple</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark text-center">
+    <h1 class="display-1 text-primary">Base64 Simple</h1>
+    <div class="container">
+        <textarea id="input" class="form-control mb-3" placeholder="Input..."></textarea>
+        <textarea id="output" class="form-control mb-3" placeholder="Output..."></textarea>
+        <button id="encode" class="btn btn-primary">Encode</button>
+        <button id="decode" class="btn btn-primary">Decode</button>
+    </div>
+    <div class="container text-center text-muted">
+        <span>Coded in 10 minutes by <a href="https://github.com/Stykh" target="_blank">Stykh</a></span>
+    </div>
+</body>
+<script type="text/javascript">
+let input = document.getElementById('input');
+let output = document.getElementById('output');
+let encode = window.btoa;
+let decode = window.atob;
+$('#encode').click(function() { output.value = encode(input.value) });
+$('#decode').click(function() { output.value = decode(input.value) });
+</script>
